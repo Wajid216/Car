@@ -25,7 +25,13 @@ namespace WebApplication1.Controllers
         // GET: /Showroom/
         public ActionResult Index()
         {
-           
+            List<car> cli = new List<car>();
+            cli.Add(new car() { Model = "2006", Name = "Xli", price = "2322323232" });
+            cli.Add(new car() { Model = "2006", Name = "Xadali", price = "2322323232" });
+            cli.Add(new car() { Model = "20asdasd06", Name = "Xlsdadi", price = "232adasd2323232" });
+            ViewBag.cars = cli;
+
+
             return View(car);
         }
         public ActionResult Create()

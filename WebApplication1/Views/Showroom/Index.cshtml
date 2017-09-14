@@ -2,6 +2,7 @@
 
 @{
     ViewBag.Title = "Index";
+    
 }
 
 <h2>Index</h2>
@@ -42,4 +43,20 @@
     </tr>
 }
 
+</table>
+<table class="table">
+    <tr>
+        <th>name</th>
+        <th>model</th>
+        <th>price</th>
+    </tr>
+    @foreach (var item in ViewBag.cars)
+    {
+    <tr>
+        <td>@item.Name</td>
+        <td>@item.Model</td>
+        <td>@item.price</td>
+    </tr>    
+    }
+    
 </table>
